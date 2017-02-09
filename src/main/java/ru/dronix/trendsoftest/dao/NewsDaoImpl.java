@@ -62,10 +62,10 @@ public class NewsDaoImpl implements NewsDao {
         return listNews;
     }
 
-    public List<News> searchNews(Category cat, String title, String descr) {
+    public List<News> searchNews(Category cat, String str) {
         Session session=this.sessionFactory.getCurrentSession();
 
-        String query="SELECT * FROM trendsoft_test.news WHERE descr LIKE '%"+descr+"%' AND title LIKE '%"+title+"%' AND category_id='"+cat.getId()+"'";
+        String query="SELECT * FROM trendsoft_test.news WHERE category_id='"+cat.getId()+"' AND (descr LIKE '%"+str+"%' OR title LIKE '%"+str+"%')";
 
         listNews=session.createSQLQuery(query).addEntity(News.class).list();
 

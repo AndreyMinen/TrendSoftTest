@@ -44,7 +44,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Transactional
-    public List<News> searchNews(Category cat, String title, String descr) {
-        return this.newsDao.searchNews(cat,title,descr);
+    public List<News> searchNews(Category cat, String str) {
+        return this.newsDao.searchNews(cat,str);
     }
 }

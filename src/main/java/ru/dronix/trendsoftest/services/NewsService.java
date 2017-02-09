@@ -19,5 +19,5 @@ public interface NewsService {
 
     List<News> getAllNews();
 
-    List<News> searchNews(Category cat,String title,String descr);
+    List<News> searchNews(Category cat,String str);
 }

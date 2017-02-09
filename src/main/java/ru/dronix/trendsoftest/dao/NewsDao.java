@@ -20,7 +20,7 @@ public interface NewsDao {
 
     List<News> getAllNews();
 
-    List<News> searchNews(Category cat,String title,String descr);
+    List<News> searchNews(Category cat,String str);
 
 
 }

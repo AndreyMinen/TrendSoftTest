@@ -38,12 +38,10 @@ public class NewsController {
     @RequestMapping(value = "/search",method = RequestMethod.GET)
     public String search(HttpServletRequest request,Model model){
         Category cat=this.categoryService.getCategoryById(Integer.parseInt(request.getParameterValues("sel_cat")[0]));
-        String title=request.getParameterValues("search_title")[0];
-        String desc=request.getParameterValues("search_descr")[0];
-
+        String str=request.getParameterValues("search_string")[0];
 
         model.addAttribute("categories", this.categoryService.getAllCategory());
-        model.addAttribute("newsList",this.newsService.searchNews(cat,title,desc));
+        model.addAttribute("newsList",this.newsService.searchNews(cat,str));
         model.addAttribute("news",new News());
 
 

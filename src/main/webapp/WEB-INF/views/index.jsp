@@ -23,8 +23,7 @@
                         </c:forEach>
                     </select>
                 </li>
-                <li><input type="text" name="search_title" placeholder="Название"></li>
-                <li><input type="text" name="search_descr" placeholder="Содержание"></li>
+                <li><input type="text" name="search_string" placeholder="Поиск"></li>
                 <li><input type="submit" value="Найти"></li>
             </ul>
         </form>
@@ -54,6 +53,9 @@
                     </tr>
                 </c:forEach>
             </table>
+        </c:if>
+        <c:if test="${empty newsList}">
+            <h2>Новостей нет</h2>
         </c:if>
     </div>
 
