@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+#block-table{
+    width: 900px;
+    height: auto;
+    margin-left: 200px;
+}
+#block-table ul li{
+    list-style-type: none;
+}
+
+#block-create{
+    margin-top: 80px;
+}
+
+#block-search{
+    margin-bottom: 70px;
+    margin-left: 300px;
+}
+
+#block-search ul li{
+    list-style-type: none;
+    float: left;
+    padding-left: 20px;
+}
